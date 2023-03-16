@@ -4,6 +4,7 @@ import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 
 import java.io.FileInputStream;
+import java.util.Random;
 
 public class DataHandler {
 
@@ -21,5 +22,11 @@ public class DataHandler {
             System.out.println("Excel file path: " + path + " --> Is the excel file of given name missing?");
         }
         return excelWSheet;
+    }
+
+    public static int getRandomNumber(int min, int limit) {
+        Random random = new Random();
+        int num = random.nextInt(min, limit);
+        return num;
     }
 }
